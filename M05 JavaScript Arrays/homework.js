@@ -172,18 +172,43 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-}
+   arrayMeses = []
+   for(let i=0; i < array.length ; i++){
+      if(array[i] === "Enero"||array[i] === "Marzo"||array[i] === "Noviembre"){
+         arrayMeses.push(array[i])
+      }
+      }
+      
+      if (arrayMeses.length === 3){
+          return arrayMeses
+      } else return "No se encontraron los meses pedidos"
+   
+   }
+
+  
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   let tablaSeis =[]
+   for(let i= 0 ; i <=60;i+=6){
+      tablaSeis.push(i)
+   }
+   return tablaSeis
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   let masCien = []
+   for(let i=0; i < array.length;i++){
+      if(array[i] > 100){
+         masCien.push(array[i])
+      }
+   }
+   return masCien;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -197,6 +222,28 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   /*let array = []
+   or(let i=0; i < 10 ; i++){
+      if(num === i){
+         break;
+      }
+
+      num = num + 2
+      array.push(num)
+   }*/
+   let array = [];
+   for (let i = 0; i < 10; i++) {
+      if (num === i) {
+         break; 
+      }
+      num = num + 2;
+      array.push(num);
+   }
+
+   if (array.length < 10) {
+      return "Se interrumpió la ejecución";
+   }
+   return array;
 }
 
 function continueStatement(num) {
@@ -206,6 +253,15 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   let array = []
+   for (let i = 0; i < 10; i++) {
+      if (i === 5) {
+        continue;
+      }
+      num = num + 2
+      array.push(num)
+    }
+    return array;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
